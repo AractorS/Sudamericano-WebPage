@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carreras - Instituto Tecnológico Sudamericano</title>
+  <meta name="description" content="Consulta las carreras disponibles en el Instituto Tecnológico Sudamericano">
+  
+  <!-- Montserrat: Fuente externa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
+    rel="stylesheet">
+  
+  <!-- Hoja de estilos para carreras -->
+  <link rel="stylesheet" href="carreras.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo del Instituto Tecnológico Sudamericano">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="carreras.html" class="active">Carreras</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <span class="nav-underline"></span>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Cuadro de búsqueda -->
+    <section class="search-container">
+      <input type="text" placeholder="Buscar carreras..." id="search-input">
+    </section>
+    
+    <!-- Tarjetas de carreras -->
+    <section class="carreras-container">
+      <!-- Tarjeta: Desarrollo de Software -->
+      <div class="carrera-card">
+        <img src="img/DS.webp" alt="Desarrollo de Software">
+        <div class="card-content">
+          <h3>Desarrollo de Software</h3>
+          <p>Aprende a desarrollar aplicaciones y sistemas con las últimas tecnologías.</p>
+          <ul class="carrera-benefits">
+            <li>Título de tercer nivel</li>
+            <li>Conocimientos en desarrollo web</li>
+            <li>Conocimientos en desarrollo móvil</li>
+          </ul>
+          <a href="#" class="btn ver-mas">Ver más</a>
+        </div>
+      </div>
+      
+      <!-- Tarjeta: Talento Humano -->
+      <div class="carrera-card">
+        <img src="img/TH.webp" alt="Talento Humano">
+        <div class="card-content">
+          <h3>Talento Humano</h3>
+          <p>Desarrolla habilidades en gestión de personas y liderazgo organizacional.</p>
+          <ul class="carrera-benefits">
+            <li>Administración de Recursos Humanos</li>
+            <li>Capacitación y Desarrollo</li>
+            <li>Gestión del Talento</li>
+          </ul>
+          <a href="#" class="btn ver-mas">Ver más</a>
+        </div>
+      </div>
+      
+      <!-- Tarjeta: Gastronomía -->
+      <div class="carrera-card">
+        <img src="img/G.webp" alt="Gastronomía">
+        <div class="card-content">
+          <h3>Gastronomía</h3>
+          <p>Explora el arte culinario y adquiere técnicas innovadoras en cocina.</p>
+          <ul class="carrera-benefits">
+            <li>Técnicas Culinarias</li>
+            <li>Gestión de Alimentos</li>
+            <li>Creatividad en Cocina</li>
+          </ul>
+          <a href="#" class="btn ver-mas">Ver más</a>
+        </div>
+      </div>
+      
+      <!-- Tarjeta: Diseño Gráfico -->
+      <div class="carrera-card">
+        <img src="img/DG.webp" alt="Diseño Gráfico">
+        <div class="card-content">
+          <h3>Diseño Gráfico</h3>
+          <p>Aprende a comunicar visualmente y crea diseños impactantes.</p>
+          <ul class="carrera-benefits">
+            <li>Diseño Visual</li>
+            <li>Manejo de Herramientas Digitales</li>
+            <li>Creatividad Aplicada</li>
+          </ul>
+          <a href="#" class="btn ver-mas">Ver más</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Instituto Tecnológico Sudamericano. Todos los derechos reservados.</p>
+  </footer>
+  
+  <!-- Script principal (si utilizas el mismo comportamiento para el subrayado del nav) -->
+  <script src="script.js"></script>
+  <script src="busqueda.js"></script>
+</body>
+</html>

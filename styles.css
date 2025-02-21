@@ -104,7 +104,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: url('img/Fondo.png') no-repeat center center;
+    background: url('img/Fondo.webp') no-repeat center center;
     background-size: content;
     background-position: -290px;
     min-height: 100vh; /* O el alto que desees */
@@ -180,7 +180,7 @@
   }
   
   .btn:hover {
-    background-color: #21322a;
+    background-color: #333;
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
