@@ -1,0 +1,131 @@
+/* Estilos generales */
+:root {
+    --color-primary: #1b2a2f;
+    --color-secondary: #5b7d68;
+    --color-bg: #f4f4f4;
+    --color-text: #333;
+    --color-white: #fff;
+  
+    /* Tipografías */
+    --font-family-base: 'Montserrat', sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+
+  
+
+.logo img {
+    height: 50px;
+  }
+
+/* Menú de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f604f;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 25px 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+    left: 0%;
+  }
+  
+
+  nav ul li {
+    margin-left: 75px;
+  }
+  
+
+  nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+
+  nav ul li a:hover {
+    color: #d8e3db;
+  }
+
+  nav {
+    position: relative;
+  }
+  
+  /* Subrayado dinámico */
+  .nav-underline {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: white;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    z-index: 10;
+  }
+
+/* Sección principal */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #4f745e;
+    color: white;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2f604f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.hero .btn:hover {
+    background-color: #1d3f35;
+}
+
+/* Sección Sobre Nosotros */
+.about {
+    padding: 40px;
+    background: white;
+    text-align: center;
+}
+
+.about h1 {
+    color: #2f604f;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+}

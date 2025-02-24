@@ -211,6 +211,41 @@
     line-height: 1.6;
   }
   
+/* =========================================
+   SECCIÓN SLIDER DE IMÁGENES
+   ========================================= */
+   .slider {
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-container {
+    display: flex;
+    width: 500%;
+    animation: slide 10s infinite;
+    transition: transform 1s ease-in-out;
+  }
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  @keyframes slide {
+    0%, 20% { transform: translateX(0%); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 95% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+  }
+
+
   /* =========================================
      FOOTER (sin cambios)
      ========================================= */
@@ -243,4 +278,3 @@
       align-items: center;
     }
   }
-  
