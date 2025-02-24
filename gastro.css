@@ -191,59 +191,100 @@
   }
   
   .carrera-detalles .detalle-item {
-    flex: 1 1 300px;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
+  flex: 1 1 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: justify;
+
   }
   
   .carrera-detalles .detalle-item h2 {
     color: var(--color-primary);
     font-size: 24px;
     margin-bottom: 15px;
+    text-align-last: center;
   }
   
   .carrera-detalles .detalle-item p {
     font-size: 16px;
     color: var(--color-text);
     line-height: 1.6;
+    text-align-last: center;
   }
   
 /* =========================================
    SECCIÓN SLIDER DE IMÁGENES
    ========================================= */
-   .slider {
-    width: 80%;
-    margin: 30px auto;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .slider-container {
-    display: flex;
-    width: 500%;
-    animation: slide 10s infinite;
-    transition: transform 1s ease-in-out;
-  }
-  .slide {
-    width: 100%;
-    flex-shrink: 0;
-  }
-  .slide img {
-    width: 100%;
-    display: block;
-  }
-  @keyframes slide {
-    0%, 20% { transform: translateX(0%); }
-    25%, 45% { transform: translateX(-100%); }
-    50%, 70% { transform: translateX(-200%); }
-    75%, 95% { transform: translateX(-300%); }
-    100% { transform: translateX(-400%); }
-  }
+   /* Contenedor del slider */
+.slider {
+  width: 80%; /* Ajusta según lo necesites */
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor de las slides */
+.slider-container {
+  display: flex;
+  /* Su ancho debe ser igual al número de slides multiplicado por (100%/3).
+     Por ejemplo, si tienes 6 imágenes: 6 * (100%/3) = 200% */
+  width: 200%; /* Ajusta según la cantidad de imágenes */
+  transition: transform 1s ease-in-out;
+  animation: slide 10s infinite; /* Si deseas auto sliding */
+}
+
+/* Cada slide ocupa 1/3 del contenedor para mostrar tres imágenes a la vez */
+.slide {
+  width: calc(100% / 3);
+  flex-shrink: 0;
+  padding: 20px; /* Espacio entre imágenes */
+  box-sizing: border-box;
+}
+
+/* Estilo de las imágenes con marco */
+.slide img {
+  width: 100%; /* Ocupa todo el ancho de su contenedor */
+  height: 80%;
+  display: block;
+  border: 2px solid #ccc; /* Marco de 2px en gris */
+  border-radius: 5px;    /* Bordes redondeados, opcional */
+}
+
+/* Botones de navegación */
+.slider .prev,
+.slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider .prev {
+  left: 10px;
+}
+
+.slider .next {
+  right: 10px;
+}
+
+/* Ejemplo de keyframes para auto sliding (ajusta según la cantidad de grupos de imágenes) */
+@keyframes slide {
+  0%, 20% { transform: translateX(0%); }
+  25%, 45% { transform: translateX(-100%); }
+  50%, 70% { transform: translateX(-100%); }
+  75%, 95% { transform: translateX(0%); }
+  100% { transform: translateX(0%); }
+}
 
 
   /* =========================================
