@@ -34,20 +34,18 @@
   /* =========================================
      ENCABEZADO
      ========================================= */
-     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        background-color: transparent;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-        padding: 25px 50px;
-      }
+  header {
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 25px 50px;
+  }
       
   
   .logo img {

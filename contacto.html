@@ -1,0 +1,122 @@
+<!-- contacto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Instituto Tecnológico Sudamericano</title>
+    <meta name="description" content="Contáctanos - Instituto Tecnológico Sudamericano">
+  
+    <!-- Montserrat: Fuente externa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
+    rel="stylesheet">
+
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Hoja de estilos para contacto -->
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.webp" alt="Logo del Instituto Tecnológico Sudamericano">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="carreras.html">Carreras</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+      <span class="nav-underline"></span>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="contacto-container">
+      <div class="contacto-info">
+        <h1>Contacto</h1>
+        <p>Estamos aquí para responder tus preguntas. Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+        
+        <div class="info-items">
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h3>Ubicación</h3>
+              <a href="https://maps.app.goo.gl/wY7F9xZfP77yrvxA8" target="_blank" rel="noopener noreferrer" style="color: white;">
+                Páez entre Sucre y Olmedo
+              </a>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h3>Teléfono</h3>
+              <p>+593 98 302 9922</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>info@sudamericano.edu.ec</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contacto-form">
+        <form id="form-contacto">
+          <div class="form-group">
+            <label for="nombre"><i class="fa-solid fa-user"></i> Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+            
+          <div class="form-group">
+            <label for="email"><i class="fa-solid fa-envelope"></i> Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="telefono"><i class="fa-solid fa-phone"></i> Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+            
+          <div class="form-group">
+            <label for="asunto"><i class="fa-solid fa-list"></i> Asunto</label>
+            <select id="asunto" name="asunto" required>
+                <option value="">Selecciona una opción</option>
+                <option value="informacion">Información general</option>
+                <option value="admisiones">Admisiones</option>
+                <option value="carreras">Información de carreras</option>
+                <option value="otros">Otros</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="mensaje"><i class="fa-solid fa-comment"></i> Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Instituto Tecnológico Sudamericano. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
