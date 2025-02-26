@@ -1,32 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Página de Diseño Gráfico cargada correctamente");
-  
-    // Efecto de desplazamiento en los elementos de detalles
-    const detalles = document.querySelectorAll(".detalle-item");
-  
-    const mostrarDetalles = () => {
-      detalles.forEach((detalle, index) => {
-        setTimeout(() => {
-          detalle.classList.add("visible");
-        }, index * 300); // Agrega un pequeño retraso entre cada uno
-      });
-    };
-  
-    window.addEventListener("scroll", function () {
-      const posicion = document.querySelector(".carrera-detalles").offsetTop;
-      if (window.scrollY > posicion - window.innerHeight / 1.2) {
-        mostrarDetalles();
-      }
-    });
-  
-    // Menú de navegación responsivo
-    const nav = document.querySelector("nav ul");
-    const menuBtn = document.createElement("button");
-    menuBtn.textContent = "☰";
-    menuBtn.classList.add("menu-btn");
-    document.querySelector("header").appendChild(menuBtn);
-  
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  const sliderContainer = document.querySelector('.slider-container');
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  // Desactivamos la animación automática para evitar conflictos
+  sliderContainer.style.animation = 'none';
+
+  const totalSlides = slides.length;
+  const visibleSlides = 3; // Número de imágenes visibles al mismo tiempo
+  const totalGroups = Math.ceil(totalSlides / visibleSlides); // Número total de grupos
+  let currentGroup = 0; // Grupo actual
+
+  function updateSlider() {
+    // Se traslada el contenedor un 100% del ancho del slider por cada grupo
+    sliderContainer.style.transform = `translateX(-${currentGroup * (100 / visibleSlides)}%)`;
+  }
+
+  nextBtn.addEventListener('click', function() {
+    if (currentGroup < totalGroups - 1) {
+      currentGroup++; // Avanzar al siguiente grupo
+    } else {
+      currentGroup = 0; // Volver al primer grupo
+    }
+    updateSlider(); // Actualizar el desplazamiento
   });
+
+  prevBtn.addEventListener('click', function() {
+    if (currentGroup > 0) {
+      currentGroup--; // Retroceder al grupo anterior
+    } else {
+      currentGroup = totalGroups - 1; // Ir al último grupo
+    }
+    updateSlider(); // Actualizar el desplazamiento
+  });
+});

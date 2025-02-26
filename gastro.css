@@ -22,67 +22,7 @@
     color: var(--color-text);
     line-height: 1.5;
   }
-  
-  /* =========================================
-     ENCABEZADO Y NAVEGACIÓN (sin cambios)
-     ========================================= */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    padding: 25px 50px;
-  }
-  
-  .logo img {
-    height: 50px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    position: relative;
-    left: 0%;
-  }
-  
-  nav ul li {
-    margin-left: 75px;
-  }
-  
-  nav ul li a {
-    color: var(--color-white);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-    position: relative;
-  }
-  
-  nav ul li a:hover {
-    color: #d8e3db;
-  }
-  
-  nav {
-    position: relative;
-  }
-  
-  .nav-underline {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    height: 3px;
-    width: 0;
-    background-color: white;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-    z-index: 10;
-  }
+
   
   /* =========================================
      SECCIÓN HERO y VIDEO DE FONDO
@@ -154,26 +94,6 @@
     margin-top: 15px;
     line-height: 1.5;
   }
-  
-  .btn {
-    display: inline-block;
-    background-color: #2a4136;
-    color: var(--color-white);
-    padding: 12px 28px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #333;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-  
   /* =========================================
      NUEVA SECCIÓN: Detalles de la Carrera
      ========================================= */
