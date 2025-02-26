@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-secondary);
+    background-color: transparent;
     position: absolute;
     top: 0;
     left: 0;
@@ -84,238 +84,354 @@
     z-index: 10;
   }
   
- /* =========================================
-   SECCIÓN HERO y VIDEO DE FONDO
-   ========================================= */
-.hero {
-  position: relative;
-  display: flex;           /* Para centrar el contenido */
-  align-items: center;     /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 0 2rem;         /* Margen horizontal para pantallas pequeñas */
-}
-
-/* Contenedor del video */
-.video-container {
-  position: absolute; /* Para que el video sea un fondo */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1; /* El video queda detrás del texto */
-}
-
-/* Overlay oscuro encima del video */
-.video-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5); /* Ajusta la opacidad a tu gusto */
-  z-index: 1;
-}
-
-#background-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  z-index: 0; /* Debajo del overlay */
-}
-
-/* Contenedor de texto */
-.hero-text {
-  position: relative;
-  z-index: 2; /* Sobre el overlay */
-  max-width: 700px; /* Ajusta el ancho máximo para el texto */
-  text-align: center;
-  color: #fff;  /* Texto en blanco */
-  background: rgba(0,0,0,0.4); /* Fondo semitransparente para dar más contraste */
-  backdrop-filter: blur(3px);  /* Sutil desenfoque, opcional */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(57,146,194,0.67);
-}
-
-/* Título */
-.tituloh1 {
-  font-size: 70px; /* Ajusta para que no se salga del recuadro */
-  margin-bottom: 20px;
-  line-height: 1.1;
-}
-
-/* Subtítulo o texto introductorio */
-.hero-text .sub-text {
-  font-size: 20px;
-  margin-top: 15px;
-  line-height: 1.5;
-}
-
-/* Botón principal (opcional, si lo utilizas) */
-.btn {
-  display: inline-block;
-  background-color: #2a4136;
-  color: var(--color-white);
-  padding: 12px 28px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #333;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+  /* =========================================
+     SECCIÓN HERO y VIDEO DE FONDO
+     ========================================= */
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 0 2rem;
+  }
+  
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .video-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+  
+  #background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(57,146,194,0.67);
+  }
+  
+  .tituloh1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+  }
+  
+  .hero-text .sub-text {
+    font-size: 20px;
+    margin-top: 15px;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #2a4136;
+    color: var(--color-white);
+    padding: 12px 28px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
   
   /* =========================================
      NUEVA SECCIÓN: Detalles de la Carrera
      ========================================= */
-  .carrera-detalles {
+  .tarjetas-info {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    padding: 40px 10%;
-    background-color: var(--color-bg);
+    align-items: center;
+    gap: 30px;
+    padding: 80px 10%;
+    background: linear-gradient(to right, #000428, #002647);
+    min-height: 60vh;
+    position: relative;
+    overflow: hidden;
   }
   
-  .carrera-detalles .detalle-item {
-  flex: 1 1 300px;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: justify;
-
+  .tarjeta {
+    position: relative;
+    width: 300px;
   }
   
-  .carrera-detalles .detalle-item h2 {
-    color: var(--color-primary);
-    font-size: 24px;
-    margin-bottom: 15px;
-    text-align-last: center;
+  .tarjeta .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.4s;
   }
   
-  .carrera-detalles .detalle-item p {
-    font-size: 16px;
-    color: var(--color-text);
-    line-height: 1.6;
-    text-align-last: center;
+  .tarjeta .face.face1 {
+    position: relative;
+    background: #c20000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
   }
   
-/* =========================================
-   SECCIÓN SLIDER DE IMÁGENES
-   ========================================= */
-   /* Contenedor del slider */
-.slider {
-  width: 80%; /* Ajusta según lo necesites */
-  margin: 50px auto;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Contenedor de las slides */
-.slider-container {
-  display: flex;
-  /* Su ancho debe ser igual al número de slides multiplicado por (100%/3).
-     Por ejemplo, si tienes 6 imágenes: 6 * (100%/3) = 200% */
-  width: 200%; /* Ajusta según la cantidad de imágenes */
-  transition: transform 1s ease-in-out;
-  animation: slide 10s infinite; /* Si deseas auto sliding */
-}
-
-/* Cada slide ocupa 1/3 del contenedor para mostrar tres imágenes a la vez */
-.slide {
-  width: calc(100% / 3);
-  flex-shrink: 0;
-  padding: 20px; /* Espacio entre imágenes */
-  box-sizing: border-box;
-}
-
-/* Estilo de las imágenes con marco */
-.slide img {
-  width: 100%; /* Ocupa todo el ancho de su contenedor */
-  height: 80%;
-  display: block;
-  border: 2px solid #ccc; /* Marco de 2px en gris */
-  border-radius: 5px;    /* Bordes redondeados, opcional */
-}
-
-/* Botones de navegación */
-.slider .prev,
-.slider .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.slider .prev {
-  left: 10px;
-}
-
-.slider .next {
-  right: 10px;
-}
-
-/* Ejemplo de keyframes para auto sliding (ajusta según la cantidad de grupos de imágenes) */
-@keyframes slide {
-  0%, 20% { transform: translateX(0%); }
-  25%, 45% { transform: translateX(-100%); }
-  50%, 70% { transform: translateX(-100%); }
-  75%, 95% { transform: translateX(0%); }
-  100% { transform: translateX(0%); }
-}
-
-
+  .tarjeta:hover .face.face1 {
+    transform: translateY(0);
+  }
+  
+  .tarjeta .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+    text-align: center;
+  }
+  
+  .tarjeta:hover .face.face1 .content {
+    opacity: 1;
+  }
+  
+  .tarjeta .face.face1 .content i {
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+  }
+  
+  .tarjeta-titulo {
+    font-size: 1.5em;
+    color: #f7f7f7;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .tarjeta .face.face2 {
+    position: relative;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
+  }
+  
+  .tarjeta:hover .face.face2 {
+    transform: translateY(0);
+  }
+  
+  .tarjeta-contenido {
+    font-size: 10pt;
+    color: #333;
+  }
+  
+  .tarjeta-contenido a {
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    outline: 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+  }
+  
+  .tarjeta-contenido a:hover {
+    background: #333;
+    color: whitesmoke;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  }
+  
   /* =========================================
-     FOOTER (sin cambios)
+     SECCIÓN SLIDER DE IMÁGENES
+     ========================================= */
+  .section-imagenes-principales {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .titulo-imagenes-principales {
+    margin-bottom: 20px;
+    color: #404040;
+    font-size: 25px;
+  }
+  
+  .slider {
+    width: 80%;
+    margin: 5px auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider-container {
+    display: flex;
+    width: 300%;
+    transition: transform 1s ease-in-out;
+    animation: slide 15s infinite;
+  }
+  
+  .slide {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 80%;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .slider .prev,
+  .slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .slider .prev {
+    left: 10px;
+  }
+  
+  .slider .next {
+    right: 10px;
+  }
+  
+  .slider .prev:hover,
+  .slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  @keyframes slide {
+    0%, 20%   { transform: translateX(0%); }
+    25%, 45%  { transform: translateX(-100%); }
+    50%, 70%  { transform: translateX(-100%); }
+    75%, 95%  { transform: translateX(0%); }
+    100%      { transform: translateX(0%); }
+  }
+  
+  /* =========================================
+     SECCIÓN DE IMÁGENES SECUNDARIAS
+     ========================================= */
+  .titulo-imagenes-secundarias {
+    text-align: center;
+    color: #404040;
+    font-size: 20px;
+    margin-top: 100px;
+  }
+  
+  .imagenes-secundarias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+  }
+  
+  .imagenes-secundarias img {
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .imagenes-secundarias img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* =========================================
+     SECCIÓN FOOTER
      ========================================= */
   footer {
-    background-color: var(--color-primary);
+    background-color: #1b2a2f;
+    color: #fff;
+    padding: 2rem;
     text-align: center;
-    padding: 15px;
-    color: var(--color-white);
-    font-size: 14px;
+  }
+  
+  footer h4 {
+    font-size: 18px;
+  }
+  
+  footer p {
+    margin-top: 10px;
+  }
+  
+  footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  footer .social-icons a:hover {
+    color: #5b7d68;
   }
   
   /* =========================================
-     MEDIA QUERIES para Responsividad
+     MEDIA QUERIES: RESPONSIVO
      ========================================= */
   @media (max-width: 768px) {
-    .hero-text {
-      position: static;
-      max-width: 90%;
-      margin: 20px auto;
-      background: rgba(235, 232, 232, 0.2);
-      padding: 15px;
+    .hero-text h1 {
+      font-size: 40px;
     }
-    
-    .tituloh1 {
-      font-size: 60px;
+  
+    .hero-text .sub-text {
+      font-size: 16px;
     }
-    
-    .carrera-detalles {
+  
+    .imagenes-secundarias {
       flex-direction: column;
-      align-items: center;
+      padding: 2rem;
+    }
+  
+    .imagenes-secundarias img {
+      width: 80%;
+      margin-bottom: 20px;
     }
   }
+  

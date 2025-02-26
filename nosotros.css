@@ -1,131 +1,258 @@
-/* Estilos generales */
+/* =========================
+   RESET Y CONFIGURACIÓN
+========================= */
+
 :root {
-    --color-primary: #1b2a2f;
-    --color-secondary: #5b7d68;
-    --color-bg: #f4f4f4;
-    --color-text: #333;
-    --color-white: #fff;
-  
-    /* Tipografías */
-    --font-family-base: 'Montserrat', sans-serif;
-  }
+  --color-primary: #1b2a2f;
+  --color-secondary: #5b7d68;
+  --color-bg: #f4f4f4;
+  --color-text: #333;
+  --color-white: #fff;
+  --font-family-base: 'Montserrat', sans-serif;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: var(--font-family-base);
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    line-height: 1.5;
-  }
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave */
+}
 
-  
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* =========================
+   ENCABEZADO Y MENÚ
+========================= */
+header {
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+  background-color: var(--color-secondary);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 25px 50px;
+}
+
 
 .logo img {
-    height: 50px;
-  }
-
-/* Menú de navegación */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2f604f;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    padding: 25px 50px;
+  height: 50px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    position: relative;
-    left: 0%;
-  }
-  
-
-  nav ul li {
-    margin-left: 75px;
-  }
-  
-
-  nav ul li a {
-    color: var(--color-white);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-    position: relative;
-  }
-
-
-  nav ul li a:hover {
-    color: #d8e3db;
-  }
-
-  nav {
-    position: relative;
-  }
-  
-  /* Subrayado dinámico */
-  .nav-underline {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    height: 3px;
-    width: 0;
-    background-color: white;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-    z-index: 10;
-  }
-
-/* Sección principal */
-.hero {
-    text-align: center;
-    padding: 50px;
-    background-color: #4f745e;
-    color: white;
+  list-style: none;
+  display: flex;
+  position: relative;
+  left: 0%;
 }
 
-.hero .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2f604f;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+
+nav ul li {
+  margin-left: 75px;
 }
 
-.hero .btn:hover {
-    background-color: #1d3f35;
+
+nav ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
-/* Sección Sobre Nosotros */
+
+nav ul li a:hover {
+  color: #d8e3db;
+}
+
+nav {
+  position: relative;
+}
+
+/* Subrayado dinámico */
+.nav-underline {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  z-index: 10;
+}
+
+/* =========================
+   SECCIÓN ABOUT CON VIDEO Y PARALLAX
+========================= */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
 .about {
-    padding: 40px;
-    background: white;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 85.5vh;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Asegura que el texto esté por encima del video */
 }
+
 
 .about h1 {
-    color: #2f604f;
+  color: white;
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  font-size: 2.5em; /* Cambia este valor para ajustar el tamaño */
+
 }
 
 .about p {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-size: 18px;
-    color: #333;
-    text-align: justify;
+  position: relative;
+  max-width: 900px;
+  margin: 3px auto;
+  padding: 4px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2em; /* Cambia este valor para ajustar el tamaño */
+}
+
+
+/* =========================
+   SECCIÓN INFO-ADICIONAL
+========================= */
+.info-adicional {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.info-adicional img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: brightness(0.5); /* Oscurece la imagen para mejorar la legibilidad del texto */
+}
+
+.info-content {
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  text-align: center; /* Centra los elementos */
+}
+
+ul li {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+
+/* =========================
+   MEDIA QUERIES (RESPONSIVE)
+========================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about,
+  .info-adicional {
+    padding: 20px;
+  }
+
+  .info-adicional p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+   footer {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 15px;
+    color: var(--color-white);
+    font-size: 14px;
 }

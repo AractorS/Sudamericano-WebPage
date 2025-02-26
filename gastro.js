@@ -9,29 +9,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const totalSlides = slides.length;
   const visibleSlides = 3; // Número de imágenes visibles al mismo tiempo
-  const totalGroups = Math.ceil(totalSlides / visibleSlides);
-  let currentGroup = 0;
+  const totalGroups = Math.ceil(totalSlides / visibleSlides); // Número total de grupos
+  let currentGroup = 0; // Grupo actual
 
   function updateSlider() {
     // Se traslada el contenedor un 100% del ancho del slider por cada grupo
-    sliderContainer.style.transform = `translateX(-${currentGroup * 100}%)`;
+    sliderContainer.style.transform = `translateX(-${currentGroup * (100 / visibleSlides)}%)`;
   }
 
   nextBtn.addEventListener('click', function() {
     if (currentGroup < totalGroups - 1) {
-      currentGroup++;
+      currentGroup++; // Avanzar al siguiente grupo
     } else {
-      currentGroup = 0; // Volver al inicio
+      currentGroup = 0; // Volver al primer grupo
     }
-    updateSlider();
+    updateSlider(); // Actualizar el desplazamiento
   });
 
   prevBtn.addEventListener('click', function() {
     if (currentGroup > 0) {
-      currentGroup--;
+      currentGroup--; // Retroceder al grupo anterior
     } else {
       currentGroup = totalGroups - 1; // Ir al último grupo
     }
-    updateSlider();
+    updateSlider(); // Actualizar el desplazamiento
   });
 });

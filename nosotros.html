@@ -1,53 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Tecnológico Sudamericano</title>
-    <link rel="stylesheet" href="nosotros.css">
+  <meta charset="UTF-8">
+  <title>Sobre Nosotros - Tecnológico Sudamericano</title>
+  
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="nosotros.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
-      rel="stylesheet"
-    >
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Íconos de FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  
 </head>
 <body>
+  <!-- Contenedor de video de fondo -->
+  <div class="video-container">
+    <video autoplay loop muted playsinline>
+      <source src="img/videoITIS.mp4" type="video/mp4">
+    </video>
+    
+  </div>
 
-    <header>
-        <div class="logo">
-          <!-- Ajusta el alt para describir adecuadamente la imagen -->
-          <img src="img/logo.webp" alt="Logo del Instituto Tecnológico Sudamericano" />
-        </div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="carreras.html">Carreras</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-          <span class="nav-underline"></span>
-        </nav>
-      </header>
+  <!-- Encabezado con logo y menú de navegación -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.webp" alt="Logo del Instituto Tecnológico Sudamericano">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Sobre nosotros</a></li>
+        <li><a href="carreras.html">Carreras</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <span class="nav-underline"></span>
+    </nav>
+  </header>
 
-    <section class="about">
-        <h1>Sobre Nosotros</h1>
+  <!-- Sección principal (Sobre Nosotros) -->
+  <section class="about" id="about">
+    <h1>Acerca de Nosotros</h1>
+    <p>Cumple tus metas y alcanza la excelencia</p>
+    
+    <!-- Flecha para bajar a la siguiente sección -->
+    <a href="#infoAdicional" class="scroll-down">
+      <i class="fas fa-angle-down"></i>
+    </a>
+  </section>
+
+  <section class="info-adicional" id="infoAdicional">
+    <div class="info-content">
         <p>
-          
-          <p>
-            El Instituto Tecnológico Superior Particular Sudamericano fue fundado en 1996 por Manuel Alfonso Manitio Conumba y autorizado por el Ministerio de Educación. Desde sus inicios, se enfocó en la formación técnica, logrando en el año 2000 el reconocimiento del CONESUP.
-            Gracias a su excelencia académica, en 2014 obtuvo una acreditación destacada del CES y CEAACES, con un 91% de eficiencia. Su crecimiento ha sido constante, y para 2022, ya contaba con:
-            <br> <i class="fas fa-check-circle"></i> ✅10 carreras presenciales
-            <br> <i class="fas fa-check-circle"></i> ✅7 carreras online
-            <br> <i class="fas fa-check-circle"></i> ✅2 carreras semipresenciales
-            <br> <i class="fas fa-check-circle"></i> ✅Un centro de idiomas avalado por Cambridge
+            Fundado en 1996 por Manuel Alfonso Manitio Conumba y autorizado por el Ministerio de Educación, el Instituto Tecnológico Sudamericano ha sido un referente en formación técnica. En el año 2000, obtuvo el reconocimiento del CONESUP y, gracias a su excelencia académica, en 2014 logró una acreditación destacada del CES y CEAACES, con un 91% de eficiencia.
         </p>
-        Trabaja pe mierda
-          
-          
+        <p>
+            Su crecimiento ha sido constante, y para 2022 ya contaba con:
         </p>
-    </section>
-    <script src="script.js"></script>
+        <ul>
+            <li>✅ 10 carreras presenciales</li>
+            <li>✅ 7 carreras online</li>
+            <li>✅ 2 carreras semipresenciales</li>
+            <li>✅ Un centro de idiomas avalado por Cambridge</li>
+        </ul>
+    </div>
+    <img src="img/sudaesterior.jpg" alt="Edificio del Instituto Tecnológico Sudamericano">
+</section>
+
+  <!-- Nueva Sección 3 con imagen -->
+<section class="seccion-3" id="seccion3">
+  <img src="img/campusmachala.jpg" alt="Instalaciones del Instituto" style="max-width: 100%; height: auto">
+</section>
+
+<!-- Pie de página -->
+<footer>
+  <p>&copy; 2025 Instituto Tecnológico Sudamericano. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+<!--<script src="nosotros.js"></script>-->
+
 </body>
 </html>
