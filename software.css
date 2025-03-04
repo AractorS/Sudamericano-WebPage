@@ -1,13 +1,15 @@
 /* =========================================
      VARIABLES Y RESETEO (sin cambios)
    ========================================= */
-    :root {
-    --color-primary: #1b2a2f;
-    --color-secondary: #5b7d68;
-    --color-bg: #f4f4f4;
-    --color-text: #333;
-    --color-white: #fff;
-    --font-family-base: 'Montserrat', sans-serif;
+  
+
+   :root {
+  --color-primary: #1b2a2f;
+  --color-secondary: #5b7d68;
+  --color-bg: #f4f4f4;
+  --color-text: #333;
+  --color-white: #fff;
+  --font-family-base: 'Montserrat', sans-serif;   
   }
   
   * {
@@ -21,9 +23,8 @@
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.5;
-  }
-  
-  
+  } 
+
  /* =========================================
    SECCIÓN HERO y VIDEO DE FONDO
    ========================================= */
@@ -73,12 +74,13 @@
   z-index: 2;
   max-width: 700px;
   text-align: center;
-  color: #fff;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(3px);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(57,146,194,0.67);
+  color: var(--color-white);
+  background: #5b7d6871;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+  border: 1px solid rgba(233, 69, 96, 0.3);
 }
 
 .tituloh1 {
@@ -93,104 +95,6 @@
   line-height: 1.5;
 }
 
-
-.tarjetas-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 80px 10%;
-  background: linear-gradient(to right, #000428, #002647);
-  min-height: 60vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.tarjeta {
-  position: relative;
-  width: 300px;
-}
-
-.tarjeta .face {
-  width: 300px;
-  height: 200px;
-  transition: 0.4s;
-}
-
-.tarjeta .face.face1 {
-  position: relative;
-  background: #0041c2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  transform: translateY(100px);
-}
-
-.tarjeta:hover .face.face1 {
-  transform: translateY(0);
-}
-
-.tarjeta .face.face1 .content {
-  opacity: 1;
-  transition: 0.5s;
-  text-align: center;
-}
-
-.tarjeta:hover .face.face1 .content {
-  opacity: 1;
-}
-
-.tarjeta .face.face1 .content i {
-  font-size: 3em;
-  color: white;
-  display: inline-block;
-}
-
-.tarjeta-titulo {
-  font-size: 1.5em;
-  color: #f7f7f7;
-  text-align: center;
-  margin: 10px 0;
-}
-
-.tarjeta .face.face2 {
-  position: relative;
-  background: whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 0px 10px rgba(0,0,0,0.8);
-  transform: translateY(-100px);
-}
-
-.tarjeta:hover .face.face2 {
-  transform: translateY(0);
-}
-
-.tarjeta-contenido {
-  font-size: 10pt;
-  color: #333;
-}
-
-.tarjeta-contenido a {
-  text-decoration: none;
-  color: black;
-  box-sizing: border-box;
-  outline: 1px dashed #333;
-  padding: 10px;
-  margin: 15px 0 0;
-  display: inline-block;
-}
-
-.tarjeta-contenido a:hover {
-  background: #333;
-  color: whitesmoke;
-  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-}
-
 footer {
   background-color: var(--color-primary);
   text-align: center;
@@ -201,7 +105,7 @@ footer {
 
 .software-projects {
   padding: 60px 10%;
-  background: linear-gradient(135deg, #1f1f9e, #4b0082); /* Gradiente azul-morado */
+  background: var(--color-secondary); /* Gradiente azul-morado */
   color: #ffffff;
   text-align: center;
   overflow: hidden; /* Evita scroll horizontal si algo se desborda */
@@ -269,7 +173,7 @@ footer {
 .btn-download {
   display: inline-block;
   padding: 10px 20px;
-  background: linear-gradient(135deg, #4b0082, #1f1f9e);
+  background: var(--color-secondary);
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
@@ -278,7 +182,7 @@ footer {
 }
 
 .btn-download:hover {
-  background: linear-gradient(135deg, #1f1f9e, #4b0082);
+  background: #3c5345;
 }
 
 /* Flechas */

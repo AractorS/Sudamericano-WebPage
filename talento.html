@@ -15,6 +15,9 @@
   <!-- Hoja de estilos -->
   <link rel="stylesheet" href="talento.css">
   <link rel="stylesheet" href="header-carreras.css">
+  <link rel="stylesheet" href="Tarjetas.css" />
+  
+
 </head>
 <body>
   <header>
@@ -31,7 +34,7 @@
       <span class="nav-underline"></span>
     </nav>
   </header>
-
+  
   <main>
     <section class="hero">
       <div class="hero-text">
@@ -98,11 +101,29 @@
     </section>
   </main>
 
+    <!-- Sección Slider de Imágenes -->
+    <section class="slider-section">
+      <h2>Proceso de Aprendizaje en Acción</h2>
+      <div class="slider">
+        <button class="prev">&#9664;</button>
+        <div class="slider-container">
+          <!-- Cada slide -->
+          <div class="slide"><img src="img-T/foto1.webp" alt="Imagen 1"></div>
+          <div class="slide"><img src="img-T/foto2.webp" alt="Imagen 2"></div>
+          <div class="slide"><img src="img-T/foto3.webp" alt="Imagen 3"></div>
+          <div class="slide"><img src="img-T/foto4.webp" alt="Imagen 4"></div>
+          <div class="slide"><img src="img-T/foto5.webp" alt="Imagen 5"></div>
+        </div>
+        <button class="next">&#9654;</button>
+      </div>
+    </section>
+
   <footer>
     <p>&copy; 2025 Instituto Tecnológico Sudamericano. Todos los derechos reservados.</p>
   </footer>
 
   <!-- Script de navegación (común) -->
   <script src="script.js"></script>
+  <script src="talento.js"></script>
 </body>
 </html>

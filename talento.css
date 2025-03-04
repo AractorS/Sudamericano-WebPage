@@ -106,112 +106,95 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   }
-  
+
   /* =========================================
-    SECCIÓN TARJETAS INFORMATIVAS (NUEVO ESTILO)
-    ========================================= */
-    .tarjetas-info {
+     SECCIÓN SLIDER DE IMÁGENES
+     ========================================= */
+
+  
+     .slider-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+    
+    .titulo-imagenes-principales {
+      color: #404040;
+      font-size: 25px;
+    }
+  
+    .slider-section {
+      padding: 60px 0%;
+      justify-content: center;
+      color: #ffffff;
+      background: var(--color-secondary);
+      text-align: center;
+    }
+    
+    .slider {
+      width: 80%;
+      margin: -50px auto;
+      overflow: hidden;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 30px;
-      padding: 80px 10%;
-      background: linear-gradient(to right, #000428, #002647);
-      min-height: 60vh;
-      position: relative;
-      overflow: hidden;
+      bottom: -55px;
     }
-  .tarjeta {
-    position: relative;
-    width: 300px;
-  }
-  
-  .tarjeta .face {
-    width: 300px;
-    height: 200px;
-    transition: 0.4s;
-  }
-  
-  .tarjeta .face.face1 {
-    position: relative;
-    background: #e86f24;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transform: translateY(100px);
-  }
-  
-  .tarjeta:hover .face.face1 {
-    transform: translateY(0);
-    box-shadow:
-      inset 0 0 60px rgb(245, 245, 245),
-      inset 10px 0 0px rgb(255, 242, 0),
-      inset -20px 0 80px rgb(255, 242, 0),
-      inset 20px 0 300px rgb(255, 242, 0),
-      inset -20px 0 300px rgb(255, 238, 1),
-      0 0 50px #fff,
-  }
-  
-  .tarjeta .face.face1 .content {
-    opacity: 1;
-    transition: 0.5s;
-    text-align: center;
-  }
-  
-  .tarjeta:hover .face.face1 .content {
-    opacity: 1;
-  }
-  
-  .tarjeta .face.face1 .content i {
-    font-size: 3em;
-    color: white;
-    display: inline-block;
-  }
-  
-  .tarjeta-titulo {
-    font-size: 1.5em;
-    color: #f7f7f7; /* Cambié el color aquí a un blanco más claro */
-    text-align: center;
-    margin: 10px 0;
-  }
-  
-  .tarjeta .face.face2 {
-    position: relative;
-    background: whitesmoke;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 0px 10px rgba(0,0,0,0.8);
-    transform: translateY(-100px);
-  }
-  
-  .tarjeta:hover .face.face2 {
-    transform: translateY(0);
-  }
-  
-  .tarjeta-contenido {
-    font-size: 10pt;
-    color: #333;
-  }
-  
-  .tarjeta-contenido a {
-    text-decoration: none;
-    color: black;
-    box-sizing: border-box;
-    outline: 1px dashed #333;
-    padding: 10px;
-    margin: 15px 0 0;
-    display: inline-block;
-  }
-  
-  .tarjeta-contenido a:hover {
-    background: #333;
-    color: whitesmoke;
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-  }
+    
+    .slider-container {
+      display: flex;
+      width: 300%;
+      transition: transform 1s ease-in-out;
+      animation: slide 15s infinite;
+    }
+    
+    .slide {
+      width: calc(100% / 3);
+      flex-shrink: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .slide img {
+      width: 100%;
+      height: 80%;
+      display: block;
+      border-radius: 15px;
+    }
+    
+    .slider .prev,
+    .slider .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    
+    .slider .prev {
+      left: 10px;
+    }
+    
+    .slider .next {
+      right: 10px;
+    }
+    
+    .slider .prev:hover,
+    .slider .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    @keyframes slide {
+      0%, 20%   { transform: translateX(0%); }
+      25%, 45%  { transform: translateX(-100%); }
+      50%, 70%  { transform: translateX(-100%); }
+      75%, 95%  { transform: translateX(0%); }
+      100%      { transform: translateX(0%); }
+    }
   
   /* =========================================
     FOOTER
